@@ -112,20 +112,76 @@ const config = {
               },
             ],
           },
+
           {
-            title: "Community",
+            title: "Self-hosting",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Moodle 5.1dev",
+                href: "https://integration.adrianoruseler.com",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "Moodle 5.0+",
+                href: "https://mdl50.adrianoruseler.com/",
               },
               {
-                label: "X",
-                href: "https://x.com/docusaurus",
+                label: "Moodle 4.4+",
+                href: "https://mdl44.adrianoruseler.com/",
+              },
+              {
+                label: "Moodle 4.3+",
+                href: "https://mdl43.adrianoruseler.com/",
+              },
+            ],
+          },
+
+          {
+            title: "Academy",
+            items: [
+              {
+                label: "Educator",
+                href: "https://moodle.academy/course/index.php?categoryid=2",
+              },
+              {
+                label: "Administrator",
+                href: "https://moodle.academy/course/index.php?categoryid=3",
+              },
+              {
+                label: "Developer",
+                href: "https://moodle.academy/course/index.php?categoryid=4",
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/@moodle",
+              },
+              {
+                label: "MoodleNet",
+                href: "https://moodle.net",
+              },
+            ],
+          },
+          {
+            title: "Moodle LMS",
+            items: [
+              {
+                label: "Releases",
+                href: "https://moodledev.io/general/releases",
+              },
+              {
+                label: "Development",
+                href: "https://moodledev.io/",
+              },
+              {
+                label: "Documentation",
+                href: "https://docs.moodle.org/",
+              },
+              {
+                label: "Tracker",
+                href: "https://moodle.atlassian.net/",
+              },
+              {
+                label: "Plugins",
+                href: "https://moodle.org/plugins/",
               },
             ],
           },
@@ -133,8 +189,16 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "moodle.org",
+                href: "https://moodle.org",
+              },
+              {
+                label: "moodle.com",
+                href: "https://moodle.com",
+              },
+              {
+                label: "Academy",
+                href: "https://moodle.academy/",
               },
               {
                 label: "GitHub",
