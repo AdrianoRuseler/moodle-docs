@@ -112,6 +112,38 @@ const config = {
               },
             ],
           },
+          {
+            title: "Development",
+            items: [
+              {
+                label: "Roadmap",
+                href: "https://moodledev.io/general/community/roadmap",
+              },
+              {
+                label: "MDK",
+                href: "https://moodledev.io/general/development/tools/mdk",
+              },
+            ],
+          },
+          {
+            title: "QA",
+            items: [
+              {
+                label: "QA testing",
+                href: "https://moodledev.io/general/development/process/testing/qa",
+              },
+            ],
+          },
+
+          {
+            title: "Docker",
+            items: [
+              {
+                label: "Dev environment",
+                href: "https://github.com/moodlehq/moodle-docker",
+              },
+            ],
+          },
 
           {
             title: "Self-hosting",
