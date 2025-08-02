@@ -7,7 +7,7 @@
 /* https://github.com/moodle/devdocs/blob/main/src/css/custom.css */
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #f4963e;
+  --ifm-color-primary: #bd5b00;
   --ifm-color-primary-dark: #aa5200;
   --ifm-color-primary-darker: #a14d00;
   --ifm-color-primary-darkest: #844000;
