@@ -108,7 +108,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
+                href: "https://docusaurus.io/docs",
               },
               {
                 label: "devdocs",
