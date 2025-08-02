@@ -24,7 +24,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/moodle-docs/",
-
+  trailingSlash: false,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "adrianoruseler", // Usually your GitHub org/user name.
@@ -110,6 +110,10 @@ const config = {
                 label: "Tutorial",
                 to: "/docs/intro",
               },
+              {
+                label: "devdocs",
+                href: "https://github.com/moodle/devdocs",
+              },
             ],
           },
           {
@@ -139,8 +143,16 @@ const config = {
             title: "Docker",
             items: [
               {
-                label: "Dev environment",
+                label: "Environment",
                 href: "https://github.com/moodlehq/moodle-docker",
+              },
+              {
+                label: "Bitnami",
+                href: "https://github.com/bitnami/containers/tree/main/bitnami/moodle",
+              },
+              {
+                label: "mdlbkp-bitnami",
+                href: "https://github.com/AdrianoRuseler/mdlbkp-bitnami",
               },
             ],
           },
