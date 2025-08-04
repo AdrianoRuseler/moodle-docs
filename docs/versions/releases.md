@@ -72,10 +72,10 @@ The most recent [long-term support release (LTS)](https://en.wikipedia.org/wiki/
 
 These are the target dates for releases. These dates may vary slightly due to unforeseen circumstances.
 
-| Release type                                                                    | Frequency | Months                                           | Timing                       |
-| ------------------------------------------------------------------------------- | --------- | ------------------------------------------------ | ---------------------------- |
-| [Major](./development/process.md#major-release-cycles) (eg. 3.x)                | 6 monthly | April, and October                               | Weeks 17, and 43 of the year |
-| [Minor](./development/process.md#stable-maintenance-cycles) (Point) (eg. 3.x.y) | 2 monthly | February, April, June, August, October, December | Usually every 8 weeks        |
+| Release type                                                                                               | Frequency | Months                                           | Timing                       |
+| ---------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------ | ---------------------------- |
+| [Major](https://moodledev.io/general/development/process#major-release-cycles) (eg. 3.x)                   | 6 monthly | April, and October                               | Weeks 17, and 43 of the year |
+| [Minor](https://moodledev.io/general/development/process.md#stable-maintenance-cycles) (Point) (eg. 3.x.y) | 2 monthly | February, April, June, August, October, December | Usually every 8 weeks        |
 
 :::tip
 
@@ -91,5 +91,5 @@ Minor releases dates differ slightly from release to release depending on the ti
 
 ## See also
 
-- [Roadmap](./community/roadmap.md) - future versions
+- [Roadmap](https://moodledev.io/general/community/roadmap.md) - future versions
 - [Moodle versions](https://docs.moodle.org/dev/Moodle_versions) - an explanation of how our versions work plus version numbers for each release (for $plugin->requires)
