@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmoodle_docs=self.webpackChunkmoodle_docs||[]).push([[6729],{3896:e=>{e.exports=JSON.parse('{"tags":[{"label":"Release notes","permalink":"/moodle-docs/docs/tags/release-notes","count":1},{"label":"Core development","permalink":"/moodle-docs/docs/tags/core-development","count":2}]}')}}]);
