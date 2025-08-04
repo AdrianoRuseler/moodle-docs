@@ -9,8 +9,16 @@ import styles from "./index.module.css";
 
 import CodeBlock from "@theme/CodeBlock";
 
-const codeExample = `
-# Install your package
+const codeExample1 = `
+# Install your package ex 1
+npm install your-package
+
+# Run the command
+your-package build
+`.trim();
+
+const codeExample2 = `
+# Install your package ex 2
 npm install your-package
 
 # Run the command
@@ -27,7 +35,10 @@ function HomepageHeader() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.codeBlockContainer}>
             <CodeBlock language="bash" showLineNumbers={false}>
-              {codeExample}
+              {codeExample1}
+            </CodeBlock>
+            <CodeBlock language="bash" showLineNumbers={true}>
+              {codeExample2}
             </CodeBlock>
           </div>
           <div className={styles.buttons}>
@@ -37,7 +48,7 @@ function HomepageHeader() {
             >
               Get Started
             </Link>
-            <Link className="button button--secondary button--lg" to="/blog">
+            <Link className="button button--primary button--lg" to="/blog">
               Read the Blog
             </Link>
           </div>

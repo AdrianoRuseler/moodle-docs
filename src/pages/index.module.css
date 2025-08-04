@@ -20,4 +20,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem; /* Adjust the value as needed (e.g., 0.5rem, 16px, etc.) */
+}
+
+.codeBlockContainer {
+  display: flex;
+  justify-content: center; /* Optional: Centers the code blocks */
+  gap: 1rem; /* Add space between the code blocks */
+}
+
+/* Optional: To make the code blocks take up equal space */
+.codeBlockContainer > .theme-code-block {
+  flex: 1;
 }
