@@ -6,6 +6,8 @@
 
 /* https://github.com/moodle/devdocs/blob/main/src/css/custom.css */
 /* You can override the default Infima variables here. */
+
+/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #bd5b00;
   --ifm-color-primary-dark: #aa5200;
@@ -14,13 +16,11 @@
   --ifm-color-primary-light: #d06400;
   --ifm-color-primary-lighter: #d96900;
   --ifm-color-primary-lightest: #f67600;
-  --ifm-color-contrasting: #194866;
   --ifm-color-success: #008a00;
   --ifm-color-danger: #ed060d;
   --ifm-font-family-base: "Open Sans";
-  --ifm-navbar-link-color: #194866;
-  --ifm-navbar-link-hover-color: #bd5b00;
-  --ifm-background-color: #fff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -32,8 +32,5 @@
   --ifm-color-primary-light: #f6a65b;
   --ifm-color-primary-lighter: #f6ae69;
   --ifm-color-primary-lightest: #f9c595;
-  --ifm-color-contrasting: var(--ifm-color-primary-lightest);
-  --ifm-navbar-link-color: #f0c505;
-  --ifm-navbar-link-hover-color: #f27e13;
-  --ifm-background-color: #1b1b1d;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

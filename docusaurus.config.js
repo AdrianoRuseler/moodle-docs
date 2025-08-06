@@ -74,6 +74,42 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "adm", // Unique ID for this docs instance
+        path: "adm-docs", // Path to your API docs folder
+        routeBasePath: "adm", // Base URL for these docs (e.g., yoursite.com/api/...)
+        sidebarPath: require.resolve("./sidebarsAdm.js"), // Separate sidebar for API docs
+        // ... other options specific to your API docs
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "dev", // Unique ID for this docs instance
+        path: "dev-docs", // Path to your Developer docs folder
+        routeBasePath: "dev", // Base URL for these docs (e.g., yoursite.com/dev/...)
+        sidebarPath: require.resolve("./sidebarsDev.js"), // Separate sidebar for Developer docs
+        // ... other options specific to your Dev docs
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "edu", // Unique ID for this docs instance
+        path: "edu-docs", // Path to your Developer docs folder
+        routeBasePath: "edu", // Base URL for these docs (e.g., yoursite.com/dev/...)
+        sidebarPath: require.resolve("./sidebarsEdu.js"), // Separate sidebar for Developer docs
+        // ... other options specific to your Dev docs
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -91,6 +127,24 @@ const config = {
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "Tutorial",
+          },
+          {
+            to: "/adm/intro", // Link to a page in your Dev docs
+            label: "Administrator",
+            position: "left",
+            activeBaseRegex: `/adm/`, // Highlight when any Dev doc is active
+          },
+          {
+            to: "/dev/intro", // Link to a page in your Dev docs
+            label: "Developer",
+            position: "left",
+            activeBaseRegex: `/dev/`, // Highlight when any Dev doc is active
+          },
+          {
+            to: "/edu/intro", // Link to a page in your Dev docs
+            label: "Educator",
+            position: "left",
+            activeBaseRegex: `/edu/`, // Highlight when any Dev doc is active
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
