@@ -197,7 +197,7 @@ const config = {
             title: "Docker",
             items: [
               {
-                label: "Environment",
+                label: "moodle-docker",
                 href: "https://github.com/moodlehq/moodle-docker",
               },
               {
@@ -207,6 +207,10 @@ const config = {
               {
                 label: "mdlbkp-bitnami",
                 href: "https://github.com/AdrianoRuseler/mdlbkp-bitnami",
+              },
+              {
+                label: "moodle-dev",
+                href: "https://github.com/kabalin/moodle-dev-compose",
               },
             ],
           },
@@ -221,6 +225,10 @@ const config = {
               {
                 label: "Moodle 5.0+",
                 href: "https://mdl50.adrianoruseler.com/",
+              },
+              {
+                label: "Moodle 4.5+",
+                href: "https://mdl45.adrianoruseler.com/",
               },
               {
                 label: "Moodle 4.4+",
