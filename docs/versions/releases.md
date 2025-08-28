@@ -12,7 +12,7 @@ import SupportedReleases, { styles as ReleaseStyles } from '@site/src/components
 import ReleaseTable from '@site/src/components/ReleaseTable';
 import Link from '@docusaurus/Link';
 
-This page lists all official releases of Moodle, grouped by branch in reverse chronological order.
+[This page lists all official releases of Moodle](https://moodledev.io/general/releases), grouped by branch in reverse chronological order.
 
 ## Version support
 
