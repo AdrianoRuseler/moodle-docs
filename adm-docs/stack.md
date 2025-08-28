@@ -48,7 +48,7 @@ sudo docker compose up -d
 
 ```
 
-    image: mathinstitut/goemaxima:2025073100-latest
+image: mathinstitut/goemaxima:2025073100-latest
 
 docker-compose.yml
 
