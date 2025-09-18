@@ -7,23 +7,9 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
-import CodeBlock from "@theme/CodeBlock";
-
-const codeExample1 = `
-# Install your package ex 1
-npm install your-package
-
-# Run the command
-your-package build
-`.trim();
-
-const codeExample2 = `
-# Install your package ex 2
-npm install your-package
-
-# Run the command
-your-package build
-`.trim();
+import SupportedReleases, {
+  styles as ReleaseStyles,
+} from "@site/src/components/SupportedReleases";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -31,25 +17,31 @@ function HomepageHeader() {
     <header className={clsx("hero hero--dark", styles.codeHero)}>
       <div className="container">
         <div className={styles.codeContent}>
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <Heading as="h1" className="hero__title">
+            {siteConfig.title}
+          </Heading>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.codeBlockContainer}>
-            <CodeBlock language="bash" showLineNumbers={false}>
-              {codeExample1}
-            </CodeBlock>
-            <CodeBlock language="bash" showLineNumbers={true}>
-              {codeExample2}
-            </CodeBlock>
+            <SupportedReleases />
           </div>
           <div className={styles.buttons}>
             <Link
               className="button button--primary button--lg"
               to="/docs/intro"
             >
-              Get Started
+              Wiki
             </Link>
-            <Link className="button button--primary button--lg" to="/blog">
-              Read the Blog
+            <Link className="button button--primary button--lg" to="/adm/intro">
+              Adm
+            </Link>
+            <Link className="button button--primary button--lg" to="/dev/intro">
+              Dev
+            </Link>
+            <Link className="button button--primary button--lg" to="/edu/intro">
+              Edu
+            </Link>
+            <Link className="button button--primary button--lg" to="/qa/intro">
+              QA
             </Link>
           </div>
         </div>

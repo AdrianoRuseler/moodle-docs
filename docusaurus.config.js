@@ -332,6 +332,10 @@ const config = {
                 label: "GitHub",
                 href: "https://github.com/AdrianoRuseler/moodle-docs",
               },
+              {
+                label: "SVG Repo",
+                href: "https://www.svgrepo.com/",
+              },
             ],
           },
         ],

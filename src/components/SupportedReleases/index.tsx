@@ -15,67 +15,70 @@
  * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
-import { MDXProvider } from '@mdx-js/react';
-import styles from './styles.module.css';
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+import styles from "./styles.module.css";
 import {
-    type majorVersionData,
-    getSupportedReleases,
-    getReleaseStatus,
-    getReleaseStatusLabel,
-    getVersionLabel,
-} from '@site/src/utils/SupportedReleases';
+  type majorVersionData,
+  getSupportedReleases,
+  getReleaseStatus,
+  getReleaseStatusLabel,
+  getVersionLabel,
+} from "@site/src/utils/SupportedReleases";
 
-export {
-    styles,
-};
+// <td>{`Moodle ${row.version}`}</td>
+//<td>{`Moodle ${row.version}`}</td>
+import Link from "@docusaurus/Link"; // {`<Link href="https://moodledev.io/general/releases/${row.version}">Moodle ${row.version}</Link>`}
+
+export { styles };
 
 export default function SupportedReleases(): JSX.Element {
-    const rows = getSupportedReleases()
-        .filter((versionData: majorVersionData) => versionData.hidden !== true)
-        .map((versionData: majorVersionData) => {
-            const releaseStatus = getReleaseStatus(versionData);
-            return {
-                name: versionData.name,
-                version: getVersionLabel(versionData.name, versionData.isLTS),
-                initialReleaseDate: versionData.releaseDate,
-                generalSupportEnds: versionData.generalEndDate,
-                securitySupportEnds: versionData.securityEndDate,
-                releaseStatus,
-                releaseStatusLabel: getReleaseStatusLabel(releaseStatus),
-            };
-        }).reverse();
+  const rows = getSupportedReleases()
+    .filter((versionData: majorVersionData) => versionData.hidden !== true)
+    .map((versionData: majorVersionData) => {
+      const releaseStatus = getReleaseStatus(versionData);
+      return {
+        name: versionData.name,
+        version: getVersionLabel(versionData.name, versionData.isLTS),
+        initialReleaseDate: versionData.releaseDate,
+        generalSupportEnds: versionData.generalEndDate,
+        securitySupportEnds: versionData.securityEndDate,
+        releaseStatus,
+        releaseStatusLabel: getReleaseStatusLabel(releaseStatus),
+      };
+    })
+    .reverse();
 
-    return (
-        <MDXProvider>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Version</th>
-                        <th>Release status</th>
-                        <th>Initial release date</th>
-                        <th>General support ends</th>
-                        <th>Security support ends</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows.map((row) => (
-                        <tr
-                            key={`SupportedRelease${row.name}`}
-                        >
-                            <td>{row.version}</td>
-                            <td
-                                className={styles[`release-state-${row.releaseStatus}`]}
-                            >
-                                {row.releaseStatusLabel}
-                            </td>
-                            <td>{row.initialReleaseDate}</td>
-                            <td>{row.generalSupportEnds}</td>
-                            <td>{row.securitySupportEnds}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </MDXProvider>
-    );
+  return (
+    <MDXProvider>
+      <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Release status</th>
+            <th>Initial release date</th>
+            <th>General support ends</th>
+            <th>Security support ends</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={`SupportedRelease${row.name}`}>
+              <td>
+                <a href={`https://moodledev.io/general/releases/${row.name}`}>
+                  Moodle {row.version}
+                </a>
+              </td>
+              <td className={styles[`release-state-${row.releaseStatus}`]}>
+                {row.releaseStatusLabel}
+              </td>
+              <td>{row.initialReleaseDate}</td>
+              <td>{row.generalSupportEnds}</td>
+              <td>{row.securitySupportEnds}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </MDXProvider>
+  );
 }
