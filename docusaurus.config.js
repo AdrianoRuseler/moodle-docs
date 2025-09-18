@@ -80,10 +80,10 @@ const config = {
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       {
         id: "adm", // Unique ID for this docs instance
-        path: "adm-docs", // Path to your API docs folder
-        routeBasePath: "adm", // Base URL for these docs (e.g., yoursite.com/api/...)
-        sidebarPath: require.resolve("./sidebarsAdm.js"), // Separate sidebar for API docs
-        // ... other options specific to your API docs
+        path: "adm-docs", // Path to your adm docs folder
+        routeBasePath: "adm", // Base URL for these docs (e.g., yoursite.com/adm/...)
+        sidebarPath: require.resolve("./sidebarsAdm.js"), // Separate sidebar for ADM docs
+        // ... other options specific to your ADM docs
       },
     ],
     [
@@ -102,10 +102,21 @@ const config = {
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       {
         id: "edu", // Unique ID for this docs instance
-        path: "edu-docs", // Path to your Developer docs folder
+        path: "edu-docs", // Path to your Edu docs folder
         routeBasePath: "edu", // Base URL for these docs (e.g., yoursite.com/dev/...)
-        sidebarPath: require.resolve("./sidebarsEdu.js"), // Separate sidebar for Developer docs
-        // ... other options specific to your Dev docs
+        sidebarPath: require.resolve("./sidebarsEdu.js"), // Separate sidebar for Edu docs
+        // ... other options specific to your Edu docs
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "qa", // Unique ID for this docs instance
+        path: "qa-docs", // Path to your QA docs folder
+        routeBasePath: "qa", // Base URL for these docs (e.g., yoursite.com/dev/...)
+        sidebarPath: require.resolve("./sidebarsQA.js"), // Separate sidebar for QA docs
+        // ... other options specific to your QA docs
       },
     ],
   ],
@@ -146,7 +157,18 @@ const config = {
             position: "left",
             activeBaseRegex: `/edu/`, // Highlight when any Dev doc is active
           },
+          {
+            to: "/qa/intro", // Link to a page in your QA docs
+            label: "QA",
+            position: "left",
+            activeBaseRegex: `/qa/`, // Highlight when any QA doc is active
+          },
           { to: "/blog", label: "Blog", position: "left" },
+          {
+            href: "https://moodledev.io/",
+            label: "Development",
+            position: "right",
+          },
           {
             href: "https://github.com/AdrianoRuseler/moodle-docs",
             label: "GitHub",
