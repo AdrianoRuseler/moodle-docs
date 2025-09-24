@@ -212,6 +212,10 @@ const config = {
                 label: "QA testing",
                 href: "https://moodledev.io/general/development/process/testing/qa",
               },
+              {
+                label: "DiceBear",
+                href: "https://www.dicebear.com/",
+              },
             ],
           },
 

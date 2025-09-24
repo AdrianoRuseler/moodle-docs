@@ -18,3 +18,7 @@ Use this awesome feature option
 This action is dangerous
 
 :::
+
+## Avatar
+
+- https://www.dicebear.com/
