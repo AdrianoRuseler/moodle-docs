@@ -32,7 +32,12 @@ const config = {
   deploymentBranch: "gh-pages", // The branch that GitHub pages will deploy from.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn", // or 'throw'
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
