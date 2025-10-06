@@ -208,11 +208,6 @@ const config = {
                 label: "MDK",
                 href: "https://moodledev.io/general/development/tools/mdk",
               },
-            ],
-          },
-          {
-            title: "QA",
-            items: [
               {
                 label: "QA testing",
                 href: "https://moodledev.io/general/development/process/testing/qa",
@@ -220,6 +215,27 @@ const config = {
               {
                 label: "DiceBear",
                 href: "https://www.dicebear.com/",
+              },
+            ],
+          },
+          {
+            title: "Plugins",
+            items: [
+              {
+                label: "moodle501",
+                href: "https://github.com/AdrianoRuseler/moodle501-plugins",
+              },
+              {
+                label: "moodle500",
+                href: "https://github.com/AdrianoRuseler/moodle500-plugins",
+              },
+              {
+                label: "moodle405",
+                href: "https://github.com/AdrianoRuseler/moodle405-plugins",
+              },
+              {
+                label: "mdldev",
+                href: "https://github.com/AdrianoRuseler/mdldev-plugins",
               },
             ],
           },
@@ -250,8 +266,12 @@ const config = {
             title: "Self-hosting",
             items: [
               {
-                label: "Moodle 5.1dev",
+                label: "Moodle 5.2dev",
                 href: "https://integration.adrianoruseler.com",
+              },
+              {
+                label: "Moodle 5.1+",
+                href: "https://mdl51.adrianoruseler.com/",
               },
               {
                 label: "Moodle 5.0+",
@@ -260,14 +280,6 @@ const config = {
               {
                 label: "Moodle 4.5+",
                 href: "https://mdl45.adrianoruseler.com/",
-              },
-              {
-                label: "Moodle 4.4+",
-                href: "https://mdl44.adrianoruseler.com/",
-              },
-              {
-                label: "Moodle 4.3+",
-                href: "https://mdl43.adrianoruseler.com/",
               },
             ],
           },
