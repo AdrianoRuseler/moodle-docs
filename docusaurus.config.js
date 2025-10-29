@@ -7,6 +7,18 @@
 import { themes as prismThemes } from "prism-react-renderer";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const formatter = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: "America/Sao_Paulo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hourCycle: "h23", // Use 24-hour format
+});
+const utc3Time = formatter.format(new Date());
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} Moodle Docs, Inc. Built with Docusaurus at ${utc3Time} UTC-3.`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -55,6 +67,8 @@ const config = {
         docs: {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
+          // 👇 Add this line for the last update time
+          showLastUpdateTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/adrianoruseler/moodle-docs/edit/main/",
         },
@@ -88,6 +102,8 @@ const config = {
         path: "adm-docs", // Path to your adm docs folder
         routeBasePath: "adm", // Base URL for these docs (e.g., yoursite.com/adm/...)
         sidebarPath: require.resolve("./sidebarsAdm.js"), // Separate sidebar for ADM docs
+        // 👇 Add this line for the last update time
+        showLastUpdateTime: true,
         // ... other options specific to your ADM docs
       },
     ],
@@ -99,6 +115,8 @@ const config = {
         path: "dev-docs", // Path to your Developer docs folder
         routeBasePath: "dev", // Base URL for these docs (e.g., yoursite.com/dev/...)
         sidebarPath: require.resolve("./sidebarsDev.js"), // Separate sidebar for Developer docs
+        // 👇 Add this line for the last update time
+        showLastUpdateTime: true,
         // ... other options specific to your Dev docs
       },
     ],
@@ -110,6 +128,8 @@ const config = {
         path: "edu-docs", // Path to your Edu docs folder
         routeBasePath: "edu", // Base URL for these docs (e.g., yoursite.com/dev/...)
         sidebarPath: require.resolve("./sidebarsEdu.js"), // Separate sidebar for Edu docs
+        // 👇 Add this line for the last update time
+        showLastUpdateTime: true,
         // ... other options specific to your Edu docs
       },
     ],
@@ -121,6 +141,8 @@ const config = {
         path: "qa-docs", // Path to your QA docs folder
         routeBasePath: "qa", // Base URL for these docs (e.g., yoursite.com/dev/...)
         sidebarPath: require.resolve("./sidebarsQA.js"), // Separate sidebar for QA docs
+        // 👇 Add this line for the last update time
+        showLastUpdateTime: true,
         // ... other options specific to your QA docs
       },
     ],
@@ -360,7 +382,8 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Moodle Docs, Inc. Built with Docusaurus.`,
+        // copyright: `Copyright © ${new Date().getFullYear()} Moodle Docs, Inc. Built with Docusaurus.`,
+        copyright: COPYRIGHT_STRING,
       },
       prism: {
         theme: prismThemes.github,
