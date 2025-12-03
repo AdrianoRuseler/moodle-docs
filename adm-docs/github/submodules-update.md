@@ -1,5 +1,38 @@
 ## The Workflow File
 
+```yml
+name: CI - Update Submodules
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write # allows pushing commits/tags/branches
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Update submodules to remote
+        run: git submodule update --init --remote
+
+      - name: Commit submodule updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update submodules to latest remote" || echo "No changes to commit"
+          git push
+```
+
+## With key
+
 Create new workflow file: (.github/workflows/update-submodules.yml)
 
 ```yml
@@ -9,6 +42,9 @@ on:
   workflow_dispatch: # Allows manual triggering
   schedule:
     - cron: "0 2 * * *" # Runs every day at 2:00 AM UTC (Optional)
+
+permissions:
+  contents: write # allows pushing commits/tags/branches
 
 jobs:
   update-submodules:
